@@ -1,3 +1,7 @@
+# The project is also deployed to
+
+https://providend-technical-assessment.vercel.app/
+
 # Notes API
 
 This is a simple Notes API implemented using **NestJS**. It allows you to manage notes associated with clients, including retrieving and adding notes for a specific client.
