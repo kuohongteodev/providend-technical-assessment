@@ -35,7 +35,7 @@ This is a simple Notes API implemented using **NestJS**. It allows you to manage
 
 ## How to Run Backend
 
-1. **Go to frontend folder**:
+1. **Go to backend folder**:
    ```bash
    cd backend
 2. **Install Dependency**:
