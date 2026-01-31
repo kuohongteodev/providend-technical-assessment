@@ -8,6 +8,9 @@ type Note = {
 // Replace with the actual client ID
 const clientId = "bb4d460d-b86f-4ae8-bf01-1826053f0ff3"
 
+const API_BASE = import.meta.env.VITE_API_URL;;
+
+
 export default function NotesApp() {
   const [notes, setNotes] = useState<Note[]>([]);
   const [newNote, setNewNote] = useState('');
@@ -15,7 +18,7 @@ export default function NotesApp() {
   // Fetch notes from the backend
   const fetchNotes = async () => {
     try {
-      const res = await fetch(`/notes/${clientId}/notes`);
+      const res = await fetch(`${API_BASE}/notes/${clientId}/notes`);
       if (!res.ok) throw new Error('Failed to fetch notes');
       const data: Note[] = await res.json();
       setNotes(data);
@@ -34,7 +37,7 @@ export default function NotesApp() {
     if (!newNote.trim()) return;
 
     try {
-      const res = await fetch(`/notes/${clientId}/notes`, {
+      const res = await fetch(`${API_BASE}/notes/${clientId}/notes`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ content: newNote }),
