@@ -39,9 +39,16 @@ This is a simple Notes API implemented using **NestJS**. It allows you to manage
    ```bash
    npm run start:dev
 
+## To use valid authorId
+
+1. **Go to backend folder**: backend/src/auth/fake-auth.middleware.ts -> change `admin-user-002` to `admin-user-001`. Run local one more time
+
+## To use invalid authorId
+1. **Go to backend folder**: backend/src/auth/fake-auth.middleware.ts -> change `admin-user-001` to `admin-user-002`. Run local one more time
+   
 ## Improvements
-1. **Unit tests**:
-2. **Real auth implementation**:
-3. **Database Integration**:
-4. **Error handling**:
+1. **Unit tests**
+2. **Real auth implementation**
+3. **Database Integration**
+4. **Error handling**
 
