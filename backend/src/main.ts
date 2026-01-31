@@ -5,7 +5,7 @@ import { FakeAuthMiddleware } from './auth/fake-auth.middleware';
 
 async function bootstrap() {
   const corsOptions: CorsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'http://localhost:5173',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
   };
 
