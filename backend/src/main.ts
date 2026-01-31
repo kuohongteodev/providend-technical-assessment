@@ -5,7 +5,10 @@ import { FakeAuthMiddleware } from './auth/fake-auth.middleware';
 
 async function bootstrap() {
   const corsOptions: CorsOptions = {
-    origin: 'http://localhost:5173',
+    origin: [
+      'http://localhost:5173',
+      'https://providend-technical-assessment.vercel.app',
+    ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
   };
 
