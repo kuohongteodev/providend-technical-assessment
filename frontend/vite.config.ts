@@ -9,10 +9,10 @@ export default ({ mode }: { mode: string }) => {
     plugins: [react()],
     server: {
       proxy: {
-        "/api": {
+        "/notes": {
           target: env.VITE_API_URL, // use env variable
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, ""),
+          rewrite: (path) => path.replace(/^\/notes/, ""),
         },
       },
     },

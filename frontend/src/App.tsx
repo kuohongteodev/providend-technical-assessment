@@ -15,7 +15,7 @@ export default function NotesApp() {
   // Fetch notes from the backend
   const fetchNotes = async () => {
     try {
-      const res = await fetch(`http://localhost:3000/notes/${clientId}/notes`);
+      const res = await fetch(`/notes/${clientId}/notes`);
       if (!res.ok) throw new Error('Failed to fetch notes');
       const data: Note[] = await res.json();
       setNotes(data);
@@ -34,7 +34,7 @@ export default function NotesApp() {
     if (!newNote.trim()) return;
 
     try {
-      const res = await fetch(`http://localhost:3000/notes/${clientId}/notes`, {
+      const res = await fetch(`/notes/${clientId}/notes`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ content: newNote }),
