@@ -9,7 +9,7 @@ export class FakeAuthMiddleware implements NestMiddleware {
   ) {
     // Hardcoded logged-in user
     //Change to admin-user-001 for testing valid user
-    req.user = { id: 'admin-user-002', username: 'admin' };
+    req.user = { id: 'admin-user-001', username: 'admin' };
     next();
   }
 }
