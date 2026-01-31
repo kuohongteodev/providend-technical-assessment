@@ -2,6 +2,8 @@
 
 https://providend-technical-assessment.vercel.app/
 
+Due to using free resource (Render) to host backend, please access https://providend-technical-assessment.onrender.com/ and wait for the resource to start first before accessing the frontend
+
 # Notes API
 
 This is a simple Notes API implemented using **NestJS**. It allows you to manage notes associated with clients, including retrieving and adding notes for a specific client.
