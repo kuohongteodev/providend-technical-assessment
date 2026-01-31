@@ -42,7 +42,7 @@ export default function NotesApp() {
       if (!res.ok) throw new Error('Failed to add note');
 
       setNewNote('');
-      fetchNotes(); // Refresh notes after adding
+      fetchNotes();
     } catch (err) {
       console.error('Error adding note:', err);
     }
@@ -63,7 +63,6 @@ export default function NotesApp() {
         <p>No notes yet.</p>
       )}
 
-      {/* Add New Note */}
       <div style={{ marginTop: '1rem' }}>
         <input
           type="text"
